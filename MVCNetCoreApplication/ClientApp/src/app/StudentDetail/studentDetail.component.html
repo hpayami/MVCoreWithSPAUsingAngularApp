@@ -1,0 +1,22 @@
+<h1 *ngIf="studentDetail" id="tableLabel">{{ studentDetail.studentName }} Data</h1>
+
+<p *ngIf="!studentDetail"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="studentDetail">
+  <thead>
+    <tr>
+      <th>Student Id</th>
+      <th>Student Name</th>
+      <th>Standard</th>
+      <th>Address</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ studentDetail.studentID }}</td>
+      <td>{{ studentDetail.studentName }}</td>
+      <td>{{ studentDetail.standard }}</td>
+      <td>{{ studentDetail.address }}</td>
+    </tr>
+  </tbody>
+</table>

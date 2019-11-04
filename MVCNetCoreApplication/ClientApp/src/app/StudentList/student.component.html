@@ -1,0 +1,18 @@
+<h1 id="tableLabel">Student Data</h1>
+
+<p *ngIf="!studentList"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="studentList">
+  <thead>
+    <tr>
+      <th>Student Id</th>
+      <th>Student Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of studentList">
+      <td><a [routerLink]="['/student/studentDetail',student.studentID]">{{ student.studentID }}</a></td>
+      <td>{{ student.studentName }}</td>
+    </tr>
+  </tbody>
+</table>
