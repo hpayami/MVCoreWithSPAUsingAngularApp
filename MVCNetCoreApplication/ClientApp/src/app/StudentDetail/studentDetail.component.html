@@ -1,6 +1,6 @@
 <h1 *ngIf="studentDetail" id="tableLabel">{{ studentDetail.studentName }} Data</h1>
 
-<p *ngIf="!studentDetail"><em>Project Loading....</em></p>
+<p *ngIf="!studentDetail"><em>Loading Data....</em></p>
 
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="studentDetail">
   <thead>
