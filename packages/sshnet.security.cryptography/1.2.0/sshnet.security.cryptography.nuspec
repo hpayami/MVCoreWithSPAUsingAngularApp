@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>SshNet.Security.Cryptography</id>
+    <version>1.2.0</version>
+    <title>SshNet.Security.Cryptography</title>
+    <authors>Renci</authors>
+    <owners>drieseng,olegkap</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/sshnet/Cryptography/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/sshnet/Cryptography/</projectUrl>
+    <description>Cryptographic functions for .NET</description>
+    <summary>Cryptographic functions for .NET</summary>
+    <releaseNotes>Changes:
+========
+
+The following methods on HashAlgorithm are now public:
+  * int TransformBlock(byte[], int, int, byte[], int)
+  * byte[] TransformFinalBlock(byte[], int, int)
+
+The following properties on HashAlgorithm are now public:
+  * byte[] Hash
+
+This affects the following target frameworks:
+
+* netstandard1.0
+* portable-net45+win8+wpa81
+
+In the uap10.0 version, our hash algorithms now derive from System.Security.Cryptographic.HashAlgorithm
+through a dependency on the System.Security.Cryptographic.Primitives package.</releaseNotes>
+    <copyright>2010-2016, RENCI</copyright>
+    <language>en-US</language>
+    <tags>crypto</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework2.0" />
+      <group targetFramework=".NETFramework4.0" />
+      <group targetFramework=".NETFramework4.5" />
+      <group targetFramework=".NETStandard1.0">
+        <dependency id="System.IO" version="4.1.0" />
+      </group>
+      <group targetFramework=".NETStandard1.3">
+        <dependency id="System.IO" version="4.1.0" />
+        <dependency id="System.Security.Cryptography.Primitives" version="4.0.0" />
+      </group>
+      <group targetFramework=".NETPortable4.5-Profile111" />
+      <group targetFramework="Silverlight4.0" />
+      <group targetFramework="Silverlight5.0" />
+      <group targetFramework="UAP10.0">
+        <dependency id="System.IO" version="4.1.0" />
+        <dependency id="System.Security.Cryptography.Primitives" version="4.0.0" />
+      </group>
+      <group targetFramework="WindowsPhone7.1" />
+      <group targetFramework="WindowsPhone8.0" />
+    </dependencies>
+  </metadata>
+</package>

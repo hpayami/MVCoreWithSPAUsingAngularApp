@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Microsoft.VisualStudio.Web.CodeGeneration.Core</id>
+    <version>3.0.0</version>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://raw.githubusercontent.com/aspnet/AspNetCore/2.0.0/LICENSE.txt</licenseUrl>
+    <projectUrl>https://asp.net/</projectUrl>
+    <iconUrl>https://go.microsoft.com/fwlink/?LinkID=288859</iconUrl>
+    <description>Contains the core infrastructure used by ASP.NET Core Code Generators.
+
+This package was built from the source code at https://github.com/aspnet/scaffolding/tree/490b73570adfa270b11f4d340a6d871e5137ab25</description>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+    <tags>aspnetcore codegenerator scaffolding visualstudioweb</tags>
+    <serviceable>true</serviceable>
+    <repository type="git" url="https://github.com/aspnet/scaffolding" branch="release/3.0" commit="490b73570adfa270b11f4d340a6d871e5137ab25" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Microsoft.VisualStudio.Web.CodeGeneration.Templating" version="3.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="3.0.0" exclude="Build,Analyzers" />
+        <dependency id="Newtonsoft.Json" version="11.0.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
